@@ -1,0 +1,155 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  background: black;
+}
+
+body {
+  font-family:' montserrat', arial, verdana;
+}
+
+#multistepsform {
+   width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  position: relative; 
+  margin-bottom: 100px;
+}
+#multistepsform fieldset {
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 10%;
+  position: relative;
+}
+#multistepsform fieldset:not(:first-of-type) {
+  display: none;
+}
+#multistepsform input,
+#multistepsform textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2c3e50;
+  font-size: 13px;
+}
+#multistepsform input:focus,
+#multistepsform textarea:focus {
+  border-color: #679b9b;
+  outline: none;
+  color: #637373;
+}
+#multistepsform .action-button {
+  width: 100px;
+  background:#ffb801;
+  font-weight: bold;
+  color: #fff;
+  transition: 150ms;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+#multistepsform .action-button:hover,
+#multistepsform .action-button:focus {
+  box-shadow: 0 0 0 2px #ffb801, 0 0 0 3px;
+  color: #fff;
+}
+#multistepsform .fs-title {
+  font-size: 19px;
+  text-transform: uppercase;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-family: 'poppins';
+}
+#multistepsform .fs-subtitle {
+  font-weight: normal;
+  font-size: 13px;
+  color: black;
+  margin-bottom: 20px;
+}
+#multistepsform #progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  counter-reset: step;
+}
+#multistepsform #progressbar li {
+  list-style-type: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 9px;
+  width: 16.33%;
+  float: left;
+  position: relative;
+  margin-left: 68px;
+}
+#multistepsform #progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 20px;
+  line-height: 20px;
+  display: block;
+  font-size: 10px;
+  color: #000000;
+  background: rgb(255, 255, 255);
+  border-radius: 3px;
+  margin: 0 auto 5px auto;
+}
+#multistepsform #progressbar li:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #679b9b;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+  z-index: -1;
+}
+#multistepsform #progressbar li:first-child:after {
+  content: none;
+}
+#multistepsform #progressbar li.active {
+  color: white;
+}
+#multistepsform #progressbar li.active:before, #multistepsform #progressbar li.active:after {
+  background: #ffb801;
+  color: white;
+}
+tr,td{
+  display: flex;
+  margin: 5px;
+}
+input#gender{
+  display: flex;
+  margin: auto;
+  margin-left: 13px;
+  margin-right: 2px;
+}
+table{
+  margin-left:auto;
+}
+.txt2 {
+  text-decoration: none;
+  font-family: Poppins-Regular;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: 12px;
+  color: #afaaaa;
+}
+.txt2:hover {
+  color: #FFB801;
+}
